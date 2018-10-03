@@ -7,6 +7,8 @@ import { AboutPage } from '../pages/about/about';
 import { SignInPage } from '../pages/signin/signin';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { QuestionPage } from '../pages/question/question';
+import { InGamePage } from '../pages/ingame/ingame';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -17,6 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     SignInPage,
     HomePage,
+    QuestionPage,
+    InGamePage,
     TabsPage
   ],
   imports: [
@@ -29,6 +33,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AboutPage,
     SignInPage,
     HomePage,
+    QuestionPage,
+    InGamePage,
     TabsPage
   ],
   providers: [
