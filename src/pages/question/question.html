@@ -1,17 +1,11 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Question
-    </ion-title>
-  </ion-navbar>
+    <button ion-button class = "leave" click="goBack()">Leave</button>
+    Timer
+    <button ion-button class = "account" (click)="doAccountAlert()">Account</button>
+
 </ion-header>
 
 <ion-content>
-  <div class = "header">
-    <button ion-button class = "leave">Leave</button>
-    <h2 class = "timer">Timer</h2>
-    <button ion-button class = "account">Account</button>
-  </div>
   <div>
       <h2>Question Content</h2>
   </div>

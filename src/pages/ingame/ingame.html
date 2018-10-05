@@ -1,23 +1,17 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      In Game
-    </ion-title>
-  </ion-navbar>
+    <button ion-button class = "leave" click="goBack()">Leave</button>
+    <button ion-button class = "account" (click)="doAccountAlert()">Account</button>
 </ion-header>
 
-<ion-content padding>
-    <button ion-button click="goBack()">Leave</button>
-    <button ion-button (click)="doAccountAlert()">Account</button>
+<ion-content>
+  <div class = "spacer"></div>
     <ion-list inset>
         <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
           {{ item }}
         </button> 
     </ion-list>
     <h2>Waiting for new bets</h2>
-    <div text-center>
-    <ion-spinner name="circles"></ion-spinner>
-  </div>
+    <h2>Animated image</h2>
     <h3>Score placeholder</h3>
 
 </ion-content>

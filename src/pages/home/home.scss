@@ -1,16 +1,18 @@
 page-home {
-    body{
-        background-color: light;
-    }
     .store{
-        position: absolute;
-        top: 0;
-        left: 0;
+        top: auto;
+        left: 5px;
+        width: 80px;
+        height: 40px;
+        border: 1px solid white;
     }
     .account{
         position: absolute;
-        top: 0;
-        right: 0;
+        top: auto;
+        right: 5px;
+        width: 80px;
+        height: 40px;
+        border: 1px solid white;
     }
     .center{
         text-align: center;
@@ -21,6 +23,11 @@ page-home {
     }
     .room{
         height: 30px;
+    }
+    ion-header{
+        background-color: color($colors, secondary);
+        border: 2px solid color($colors, primary);
+
     }
 
 }

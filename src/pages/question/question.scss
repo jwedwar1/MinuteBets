@@ -1,34 +1,27 @@
 page-question {
-    .header{
-        text-align: center;
-        margin-top: 0;
-        padding-top: 0;
-        top: 0;
-        border-top: 0;
-        border-bottom: 5px, solid, color($colors,primary);
-        background-color: color($colors, secondary);
-        padding: 0;
-    }
     .leave{
         position: absolute;
-        top: 0;
-        left: 0;
+        top: auto;
+        left: 5px;
         width: 80px;
-        border-color: white;
+        height: 40px;
+        border: 1px solid white;
     }
+
     .account{
         position: absolute;
-        right: 0;
-        top: 0;
+        top: auto;
+        right: 5px;
         width: 80px;
-        border-color: white;
+        height: 40px;
+        border: 1px solid white;
     }
-    .timer{
-        padding: 0 0;
-        margin: 0 0;
-        top: 0;
+    ion-header{
+        background-color: color($colors, secondary);
+        border: 2px solid color($colors, primary);
+        font-size: 41px;
+        text-align: center;
     }
-    .center-header{
-        background: secondary;
-    }
+
+
 }

@@ -1,18 +1,13 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <button ion-button class = "store" (click)="doStoreAlert()">Store</button>
+  <button ion-button class = "account" (click)="doAccountAlert()">Account</button>
 </ion-header>
 
-<ion-content padding>
-    <button ion-button class = "store" (click)="doStoreAlert()">Store</button>
-    <button ion-button class = "account" (click)="doAccountAlert()">Account</button>
-    <div text-center>
-    <ion-img style="width: 250px; height: 250px; background: transparent;" src="assets/imgs/mblogo.png"></ion-img>
-	</div>
-    <button ion-button class = "join" block (click)="goToGamePage()">Join Game</button>
-    <div class = "center">
-      <button ion-button class = "room" (click)="doRoomAlert()">Create Room</button>
-    </div>
+<ion-content>
+  <h1>LOGO BOI</h1>
+  <button ion-button class = "join" block (click)="goToGamePage()">Join Game</button>
+  <div class = "center">
+    <button ion-button class = "room" (click)="doRoomAlert()">Create Room</button>
+  </div>
 
 </ion-content>
