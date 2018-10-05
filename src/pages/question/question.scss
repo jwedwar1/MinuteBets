@@ -1,3 +1,34 @@
 page-question {
-
+    .header{
+        text-align: center;
+        margin-top: 0;
+        padding-top: 0;
+        top: 0;
+        border-top: 0;
+        border-bottom: 5px, solid, color($colors,primary);
+        background-color: color($colors, secondary);
+        padding: 0;
+    }
+    .leave{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        border-color: white;
+    }
+    .account{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        border-color: white;
+    }
+    .timer{
+        padding: 0 0;
+        margin: 0 0;
+        top: 0;
+    }
+    .center-header{
+        background: secondary;
+    }
 }

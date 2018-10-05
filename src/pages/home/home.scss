@@ -1,3 +1,26 @@
 page-home {
+    body{
+        background-color: light;
+    }
+    .store{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .account{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .center{
+        text-align: center;
+    }
+    .join{
+        height: 60px;
+        font-size: 24px;
+    }
+    .room{
+        height: 30px;
+    }
 
 }
