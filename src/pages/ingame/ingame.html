@@ -7,8 +7,8 @@
 </ion-header>
 
 <ion-content padding>
-    <button ion-button>Leave</button>
-    <button ion-button>Account</button>
+    <button ion-button click="goBack()">Leave</button>
+    <button ion-button (click)="doAccountAlert()">Account</button>
     <ion-list inset>
         <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
           {{ item }}

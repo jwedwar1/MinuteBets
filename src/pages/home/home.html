@@ -5,10 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-    <button ion-button>Store</button>
-    <button ion-button>Account</button>
+    <button ion-button (click)="doStoreAlert()">Store</button>
+    <button ion-button (click)="doAccountAlert()">Account</button>
     <h1>LOGO BOI</h1>
-    <button ion-button>Join Game</button>
-    <button ion-button>Create Room</button>
+    <button ion-button (click)="goToGamePage()">Join Game</button>
+    <button ion-button (click)="doRoomAlert()">Create Room</button>
 
 </ion-content>
