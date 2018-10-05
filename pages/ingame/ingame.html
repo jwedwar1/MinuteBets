@@ -1,0 +1,17 @@
+<ion-header>
+    <button ion-button class = "leave" click="goBack()">Leave</button>
+    <button ion-button class = "account" (click)="doAccountAlert()">Account</button>
+</ion-header>
+
+<ion-content>
+  <div class = "spacer"></div>
+    <ion-list inset>
+        <button ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+          {{ item }}
+        </button> 
+    </ion-list>
+    <h2>Waiting for new bets</h2>
+    <h2>Animated image</h2>
+    <h3>Score placeholder</h3>
+
+</ion-content>
