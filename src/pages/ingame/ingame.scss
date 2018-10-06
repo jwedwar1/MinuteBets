@@ -18,7 +18,55 @@ page-ingame {
     ion-header{
         background-color: color($colors, secondary);
         border: 2px solid color($colors, primary);
+    }
+    .time{
+        position: absolute;
+        top: auto;
+        left: 5px;
+        color: white;
+    }
+    .betItem{
+        text-align: center;
+        background-color: color($colors, primary);
+        border: 1px solid color($colors, secondary);
+        color: gold;
+    }
+    .wResult{
+        position: absolute;
+        top: 12px;
+        right: 5px;
+        color: green;
+    }
+    .lResult{
+        position: absolute;
+        top: 12px;
+        right: 5px;
+        color: color($colors, secondary);
 
+    }
+    h2{
+        text-align: center;
+    }
+    .score{
+        position: absolute;
+        height: 52px;
+        width: 100%;
+        background-color: color($colors, secondary);
+        border: 2px solid color($colors, primary);
+        bottom: 0;
+    }
+    .home{
+        position: absolute;
+        left: 5px;
+        top: auto;
+        color: white;
+    }
+    .away{
+        position: absolute;
+        right: 5px;
+        top: auto;
+        padding: 0;
+        color: white;
     }
 
 }

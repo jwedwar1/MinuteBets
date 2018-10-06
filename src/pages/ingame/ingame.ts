@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { HomePage } from './../home/home';
 
+
 @Component({
   selector: 'page-ingame',
   templateUrl: 'ingame.html'
@@ -29,6 +30,15 @@ export class InGamePage {
       buttons: ['Ok']
     });
     alert.present()
+  }
+  betSelected() {
+    let alert = this.alertCtrl.create({
+      title: 'Coming Soon!',
+      message: 'This button will display in-depth information about the previous bet. Current info displayed is: Time Since Bet, Amount Won/Lost, Result',
+      buttons: ['Ok']
+    });
+    alert.present()
+
   }
 
 }
