@@ -14,8 +14,8 @@ export class InGamePage {
 
 
   goBack() {
-    	this.navCtrl.pop();
-  	}
+      this.navCtrl.pop();
+    }
 
   goToHomePage() {
     //push another page onto the history stack
