@@ -4,6 +4,9 @@ import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AuthService } from '../../services/auth.services';
 import { SignupPage } from '../signup/signup';
+import { ResetPage } from '../reset/reset';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 
 
@@ -19,8 +22,12 @@ export class LoginPageModule {
 	constructor(
 		private navCtrl: NavController,
 		private auth: AuthService,
-		fb: FormBuilder
+		fb: FormBuilder,
 	) {
+
+
+
+
 		this.loginForm = fb.group({
 			email: ['', Validators.compose([Validators.required, Validators.email])],
 			password: ['', Validators.compose([Validators.required, Validators.minLength(6)])]
@@ -48,5 +55,9 @@ export class LoginPageModule {
   signup(){
     this.navCtrl.push(SignupPage);
   }
+
+	goToResetPassword(){
+  		this.navCtrl.push(ResetPage);
+	}
 
 }

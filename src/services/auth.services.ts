@@ -35,4 +35,10 @@ export class AuthService {
   		return this.afAuth.auth.signOut();
 	}
 
+	resetPW() {
+		
+		this.afAuth.auth.sendPasswordResetEmail(this.email)
+		this.navCtrl.push(HomePage);
+    }
+
 }

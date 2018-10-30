@@ -36,7 +36,8 @@ export class HomePage {
     });
     alert.present()
     */
-    this.navCtrl.setRoot(AccountPage);
+    //this.navCtrl.setRoot(AccountPage);
+    this.navCtrl.push(AccountPage);
   }
 
   doRoomAlert() {

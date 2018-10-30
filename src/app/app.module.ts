@@ -14,6 +14,7 @@ import { InGamePage } from '../pages/ingame/ingame';
 import { LoginPageModule } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { AccountPage } from '../pages/account/account';
+import { ResetPage } from '../pages/reset/reset';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +25,19 @@ import { AngularFireModule } from 'angularfire2';
 import { AuthService } from '../services/auth.services';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
+export const firebaseConfig2 = {
+  apiKey: "AIzaSyCLi_xNUUu3L3B748yNeup6bwXSaC5OUR8",
+  authDomain: "minutebets.firebaseapp.com",
+  databaseURL: "https://minutebets.firebaseio.com",
+  projectId: "minutebets",
+  storageBucket: "minutebets.appspot.com",
+  messagingSenderId: "213833608385"
+};
 
 @NgModule({
   declarations: [
@@ -36,13 +50,17 @@ import { firebaseConfig } from '../config';
     TabsPage,
     LoginPageModule,
     SignupPage,
-    AccountPage
+    AccountPage,
+    ResetPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig.fire),
-    NgxErrorsModule
+   // AngularFireModule.initializeApp(firebaseConfig.fire),
+   AngularFireModule.initializeApp(firebaseConfig2),
+    NgxErrorsModule,
+    AngularFirestoreModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +73,8 @@ import { firebaseConfig } from '../config';
     TabsPage,
     LoginPageModule,
     SignupPage,
-    AccountPage
+    AccountPage,
+    ResetPage
   ],
   providers: [
     StatusBar,

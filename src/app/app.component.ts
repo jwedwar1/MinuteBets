@@ -48,7 +48,7 @@ export class MyApp {
 
   logout() {
   this.auth.signOut();
-  this.nav.setRoot(HomePage);
+  this.nav.setRoot(LoginPageModule);
   //this.navCtrl.setRoot(HomePage);
   }
 
