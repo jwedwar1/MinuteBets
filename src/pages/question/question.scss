@@ -1,0 +1,28 @@
+page-question {
+    .leave{
+        position: absolute;
+        top: auto;
+        left: 5px;
+        width: 80px;
+        height: 40px;
+        border: 1px solid white;
+    }
+
+    .account{
+        position: absolute;
+        top: auto;
+        right: 5px;
+        width: 80px;
+        height: 40px;
+        border: 1px solid white;
+    }
+    ion-header{
+        background-color: color($colors, secondary);
+        border: 2px solid color($colors, primary);
+        font-size: 41px;
+        text-align: center;
+        color: white;
+    }
+
+
+}
