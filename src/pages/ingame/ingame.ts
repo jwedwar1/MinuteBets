@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { HomePage } from './../home/home';
+import { AccountPage } from './../account/account';
 
 
 @Component({
@@ -24,13 +25,19 @@ export class InGamePage {
   }
 
   doAccountAlert() {
+  /*
     let alert = this.alertCtrl.create({
       title: 'Coming Soon!',
       message: 'This button will link to a webpage, such as RebelRewards, where students can redeem their tokens for prizes',
       buttons: ['Ok']
     });
     alert.present()
+    */
+
+      this.navCtrl.push(AccountPage);
   }
+
+
   betSelected() {
     let alert = this.alertCtrl.create({
       title: 'Coming Soon!',

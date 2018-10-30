@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPageModule } from './../login/login';
-
+import { HomePage } from './../home/home';
+import { AuthService } from '../../services/auth.services';
 
 /**
  * Generated class for the AccountPage page.
@@ -17,7 +18,7 @@ import { LoginPageModule } from './../login/login';
 })
 export class AccountPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private auth: AuthService) {
   }
 
   ionViewDidLoad() {
@@ -25,9 +26,16 @@ export class AccountPage {
   }
 
   goToLoginPageModule() {
-    //push another page onto the history stack
-    //causing the nav controller to animate the new page in
-    this.navCtrl.setRoot(LoginPageModule);
+    this.navCtrl.push(LoginPageModule);
+  }
+
+  goToHomePage() {
+    this.navCtrl.setRoot(HomePage);
+  }
+
+  logout() {
+    this.auth.signOut();
+  	this.navCtrl.setRoot(LoginPageModule);
   }
 
 }
