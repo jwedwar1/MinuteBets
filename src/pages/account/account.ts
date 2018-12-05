@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LoginPageModule } from './../login/login';
+import { LoginPage } from './../login/login';
 import { HomePage } from './../home/home';
 import { AuthService } from '../../services/auth.services';
 
@@ -26,7 +26,7 @@ export class AccountPage {
   }
 
   goToLoginPageModule() {
-    this.navCtrl.push(LoginPageModule);
+    this.navCtrl.push(LoginPage);
   }
 
   goToHomePage() {
@@ -35,7 +35,7 @@ export class AccountPage {
 
   logout() {
     this.auth.signOut();
-  	this.navCtrl.setRoot(LoginPageModule);
+  	this.navCtrl.setRoot(LoginPage);
   }
 
 }

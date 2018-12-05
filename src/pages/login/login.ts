@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { AuthService } from '../../services/auth.services';
 import { SignupPage } from '../signup/signup';

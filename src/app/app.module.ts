@@ -27,6 +27,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { Vibration } from '@ionic-native/vibration';
 
 
 export const firebaseConfig2 = {
@@ -80,7 +81,8 @@ export const firebaseConfig2 = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
-    AngularFireAuth
+    AngularFireAuth,
+    Vibration
   ]
 })
 export class AppModule {}

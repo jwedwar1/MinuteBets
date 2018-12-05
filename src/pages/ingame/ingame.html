@@ -1,5 +1,6 @@
 <ion-header>
     <button ion-button class = "leave" (click)="goToHomePage()">Leave</button>
+    {{currency}}g
     <button ion-button class = "account" (click)="doAccountAlert()">Account</button>
 </ion-header>
 
@@ -18,15 +19,17 @@
         </button> 
     </ion-list>
     <div text-center>
-        <ion-spinner name="circles"></ion-spinner>
-      </div>
-    <h2>Waiting for new bets</h2>
-    <button (click) = "generateQuestion()">
-        <h3>Generate Question</h3>
+        <ion-spinner name="circles" *ngIf="question.hidden"></ion-spinner>
+      
+    <h2 *ngIf="question.hidden">Waiting for new bets</h2>
+    <button *ngIf="!question.hidden" (click) = "generateQuestion()">
+        <h2>New Question!</h2>
     </button>
-    <div class = "score">
-        <h3 class = "home">Home - 13</h3>
-        <h3 class = "away">10 - Away</h3>
     </div>
+    <div class = "score">
+        <h3 class = "home">Home - {{home}}</h3>
+        <h3 class = "away">{{away}} - Away</h3>
+    </div>
+
 
 </ion-content>

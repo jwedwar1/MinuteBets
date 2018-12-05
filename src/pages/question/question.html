@@ -1,27 +1,29 @@
 <ion-header>
-    <button ion-button class = "leave" (click)="goBack()">Leave</button>
+    <button ion-button class="leave" (click)="goBack()">Leave</button>
     Timer
-    <button ion-button class = "account" (click)="doAccountAlert()">Account</button>
+    <button ion-button class="account" (click)="doAccountAlert()">Account</button>
 
 </ion-header>
 
 <ion-content>
     <div text-center>
-        <h2>Players Who Will Touch The Ball</h2>
+        <h2>{{ question.qtext }}</h2>
     </div>
-     <ion-item>
-    <ion-label>John Doe</ion-label>
-    <ion-checkbox color="dark" [(ngModel)] = "one"></ion-checkbox>
-  </ion-item>
-   <ion-item>
-    <ion-label>Billy Bob</ion-label>
-    <ion-checkbox color="dark" [(ngModel)] = "two"></ion-checkbox>
-  </ion-item>
-   <ion-item>
-    <ion-label>Jimmy John</ion-label>
-    <ion-checkbox color="dark" [(ngModel)] = "three"></ion-checkbox>
-  </ion-item>
-     <button ion-button (click)="submitAlert()">Submit</button>
-  
+    <ion-list radio-group [(ngModel)]="relationship">
+        <ion-item>
+            <ion-label>{{ question.answers.one }}</ion-label>
+            <ion-radio color="dark" value = "one"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{question.answers.two}}</ion-label>
+            <ion-radio color="dark" value="two"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{question.answers.three}}</ion-label>
+            <ion-radio color="dark" value="three"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <button ion-button (click)="submitAlert()">Submit</button>
+
 
 </ion-content>
