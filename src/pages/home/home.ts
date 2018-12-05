@@ -69,7 +69,7 @@ export class HomePage {
   doRoomAlert() {
     let alert = this.alertCtrl.create({
       title: 'About',
-      message: 'James Edwards: authentication, implementation' + 'James Long: main database, implementation',
+      message: 'James and James: two Ole Miss Computer Science students and football fans',
       buttons: ['Ok']
     });
     alert.present()

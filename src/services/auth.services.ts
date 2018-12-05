@@ -37,10 +37,10 @@ export class AuthService {
   		return this.afAuth.auth.signOut();
 	}
 
-	//resetPW() {
+	resetPW(email) {
 		
-		//this.afAuth.auth.sendPasswordResetEmail(this.email)
+		this.afAuth.auth.sendPasswordResetEmail(email)
 		//this.navCtrl.push(HomePage);
-    //}
+    }
 
 }

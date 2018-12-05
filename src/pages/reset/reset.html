@@ -14,15 +14,15 @@
 
 
 <ion-content padding>
-	 <form (ngSubmit)="resetPW()">
       <ion-item>
         <ion-label>Enter Email</ion-label>
         <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
       </ion-item>
 
-      <button ion-button type="submit" block>Submit</button>
+      <button ion-button class = "join" block (click)="resetEmail(email)">Submit</button>
 
-    </form>
+
+
 
 
 </ion-content>
