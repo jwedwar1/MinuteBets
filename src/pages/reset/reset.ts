@@ -6,6 +6,7 @@ import { LoginPage } from './../login/login';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
 /**
@@ -23,6 +24,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
 
 export class ResetPage {
+  loginForm: FormGroup;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public alertCtrl: AlertController, private auth: AuthService, afDatabase: AngularFireDatabase) {
@@ -31,14 +33,20 @@ export class ResetPage {
 
   }
 
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ResetPage');
   }
 
-  resetPW() {
-		//this.auth.sendPasswordResetEmail(this.email)
+
+
+  resetEmail(mail) {
+    this.auth.resetPW(mail)
 		this.navCtrl.setRoot(LoginPage);
     }
+
+
+
 
 
 }
